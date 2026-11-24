@@ -38,7 +38,7 @@ Las referencias están en `references/`. Si no están en disco, léelas del repo
 | Rutina de entrenamiento y **diario de juicios de Erik** | `gusto.md` |
 | Ideación (asociación, bisociación, plantillas de Goldenberg), retórica visual (Phillips-McQuarrie, Forceville, Durand, Barthes), cámara, luz, color, Block, Eisenstein | `teoria-base.md` |
 
-Skills hermanas: `motion-remotion` (curvas, cámara, zooms, motion graphics, Figma → Remotion), `blender-camara-3d` (cámara y previs 3D), `video-historia-remotion` (Formato A de Milionegle), `agencia-creativa-workflow` (cliente, aprobaciones). Si existe `cerebro-erik`, consulta allí correcciones y aprendizajes previos antes de proponer.
+Complementa a `director-creativo-kleon` (mentalidad y promoción); esta skill es el oficio. Skills hermanas: `motion-remotion` (curvas, cámara, zooms, motion graphics, Figma → Remotion), `blender-camara-3d` (cámara y previs 3D), `video-historia-remotion` (Formato A de Milionegle), `agencia-creativa-workflow` (cliente, aprobaciones). Si existe `cerebro-erik`, consulta allí correcciones y aprendizajes previos antes de proponer.
 
 ---
 
@@ -201,6 +201,8 @@ Responde por escrito, en corto:
 14. ¿Se reconoce la marca con el logo tapado? ¿Está presente pronto si es pieza de pago?
 15. ¿Es producible con los créditos y herramientas disponibles? Si no, simplifica la ejecución sin perder la idea.
 16. ¿Qué haría distinto un director que Erik admire? ¿Qué decisión de esta pieza contradice el diario de juicios de Erik?
+17. ¿La idea ha pasado por las seis plantillas creativas (apéndice A)? ¿Hay una más fuerte? Si es metáfora visual, ¿qué estructura usa y se entiende en menos de 2 s?
+18. ¿La curva de contraste y afinidad (Block) acompaña a la curva de tensión?
 
 Señala qué respuestas son inferencia tuya. Si una respuesta es "no", arregla antes de entregar o dile a Erik por qué no se puede.
 
@@ -214,3 +216,25 @@ Señala qué respuestas son inferencia tuya. Si una respuesta es "no", arregla a
 - **Shot list de producción** con prompts.
 - **Notas de montaje** para Remotion/DaVinci: cortes, modos, sonido por evento, mezcla.
 - **Crítica** con la plantilla de la sección 8.
+
+---
+
+## Apéndice A. Teoría base condensada (completa en `teoria-base.md`)
+
+**Generar ideas.** Nunca la primera: genera al menos 10. Asociación semántica (campo, connotaciones, cadenas: las buenas suelen estar en el 3.er-4.º eslabón, antónimos, expresiones hechas literalizadas, objeto-símbolo). Bisociación (Koestler): unir dos marcos que nunca se tocan. SCAMPER, inversión, conexiones forzadas, cambio de escala, restricción creativa, robar el mecanismo de otro medio (no la superficie).
+
+**Seis plantillas creativas** (Goldenberg, Mazursky y Solomon, 1999; ~89 % de anuncios premiados): analogía pictórica (sustitución o analogía extrema; la más frecuente), situación extrema, consecuencias (extremas o invertidas), competición, experimento interactivo, alteración de dimensión (tiempo, tamaño, espacio). Pasa el mensaje por las seis y quédate con la más fuerte.
+
+**Retórica visual.** Una figura dominante por pieza: metáfora, metonimia, sinécdoque, hipérbole, antítesis, yuxtaposición (Kuleshov), fusión, sustitución, personificación, repetición, gradación, elipsis, ironía, juego visual literal, rima visual, mise en abyme. Phillips y McQuarrie: estructura (yuxtaposición < fusión < sustitución) × significado (conexión, semejanza, oposición) = 9 variantes; la fusión es la más difícil de leer; la sustitución funciona mejor en el contexto del original. Forceville: contextual, híbrida, integrada, símil, multimodal (imagen + sonido: la más potente y barata en vídeo). Durand: operación (adición, supresión, sustitución, intercambio) × relación; si una idea está floja, cambia la operación o la relación. Barthes: denotación/connotación; cada texto en pantalla ancla o releva.
+
+**Cámara para prompts.** Tamaños (gran general = contexto, soledad; primer plano = emoción; detalle = importancia). Ángulos (picado = vulnerabilidad; contrapicado = poder; cenital = control; holandés = inestabilidad; POV = "te pasa a ti"). Movimientos: dolly in (revelación, tensión), dolly out (soledad, cierre), crane up (trascender, escala), orbit (objeto de deseo), tracking, handheld (urgencia), whip pan (corte energético), push through (transición entre mundos), static (observación, comedia seca), dolly zoom (shock interno). Ópticas: 14-24 mm energía y distorsión; 35-50 mm natural; 85-200 mm compresión y elegancia; rack focus para cambiar la atención.
+
+**Luz, color, arte.** Block: siete componentes (espacio, línea, forma, tono, color, movimiento, ritmo) entre contraste (intensidad) y afinidad (calma); la estructura visual sigue la curva de tensión. Puesta en escena (Bordwell y Thompson): decorado, vestuario, luz (calidad, dirección, fuente, color), movimiento; los motivos se repiten y evolucionan. Paleta de 2-3 colores más un acento para lo importante; el color puede tener arco.
+
+**Montaje clásico.** Eisenstein: métrico, rítmico, tonal, armónico, intelectual; decide cuál domina cada bloque. Transiciones motivadas: match cut, whip pan, push-through, morph (primer y último fotograma en IA), corte oculto, J/L (J = el sonido del plano siguiente entra antes; L = el del anterior se alarga), smash cut.
+
+**Producción con IA.** Flujo de Erik: Krea (Seedance, Kling, Nano Banana, GPT Image) + Remotion (texto, gráficos, montaje) + DaVinci; Blender para cámara exacta y previs. Prompt de vídeo: `[plano + óptica] + [sujeto y acción] + [movimiento de cámara con dirección y velocidad] + [entorno] + [luz] + [paleta/estilo/materiales] + [duración] + [qué permanece igual]`. Un movimiento de cámara por clip; primer y último fotograma; encadenar último→primero; explorar barato y finalizar caro (regenerar a otra resolución da otra toma); biblia de estilo repetida en todos los prompts. Shot list: `# | Duración | Plano/cámara | Contenido | Figura | Herramienta | Texto encima | Sonido | Modo de ritmo`.
+
+**Investigar referencias** (con búsqueda web): referentes del tema y del tono; qué se hace ahora en el formato para romper el patrón a propósito; nombra qué mecanismo se roba de cada referencia (ética del buen ladrón en `director-creativo-kleon`); separa referencias verificadas de sugerencias.
+
+**Fuentes base.** Barthes (1964); Durand (1970); Goldenberg, Mazursky y Solomon (1999); Phillips y McQuarrie (2004); Van Enschot et al. (2023); Forceville (1996); Koestler (1964); Eisenstein (1929); Murch, *In the Blink of an Eye* (1995); Block, *The Visual Story*; Bordwell y Thompson, *Film Art*; Mascelli, *The Five C's*; Heath y Heath, *Made to Stick*. Fuentes de las reglas nuevas: en cada archivo de `references/` y en el repositorio `erubialesmolano-dotcom/direccion-creativa-rm` (`investigacion/`).
