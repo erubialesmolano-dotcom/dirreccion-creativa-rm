@@ -1,0 +1,16 @@
+{
+  "name": "direccion-creativa-rm",
+  "owner": { "name": "Erik" },
+  "metadata": { "description": "Skills de dirección creativa audiovisual para Claude", "version": "0.1.0" },
+  "plugins": [
+    {
+      "name": "direccion-creativa-rm",
+      "source": "./",
+      "description": "Dirección creativa audiovisual, motion en Remotion y cámara 3D con Blender.",
+      "version": "0.1.0",
+      "repository": "https://github.com/erubialesmolano-dotcom/direccion-creativa-rm",
+      "category": "creative",
+      "skills": "./skills/"
+    }
+  ]
+}

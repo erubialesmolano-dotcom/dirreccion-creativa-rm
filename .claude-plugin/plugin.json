@@ -1,0 +1,9 @@
+{
+  "name": "direccion-creativa-rm",
+  "version": "0.1.0",
+  "description": "Criterio de dirección creativa audiovisual, motion de nivel After Effects en Remotion, y cámara/previs con Blender. Reglas en formato efecto → recurso → por qué → cuándo romperlo.",
+  "author": { "name": "Erik" },
+  "repository": "https://github.com/erubialesmolano-dotcom/direccion-creativa-rm",
+  "keywords": ["claude-skill", "claude-code", "direccion-creativa", "remotion", "motion-design", "after-effects", "blender", "sonido", "montaje"],
+  "skills": "./skills/"
+}
