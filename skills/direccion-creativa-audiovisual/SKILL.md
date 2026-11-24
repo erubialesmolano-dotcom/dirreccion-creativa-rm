@@ -47,7 +47,7 @@ Complementa a `director-creativo-kleon` (mentalidad y promoción); esta skill es
 1. **Brief.** Extrae solo lo que falte y cambie el resultado: qué debe pensar, sentir o hacer el espectador al terminar; quién es; mensaje en una frase; formato, duración, plataforma, contexto de visionado (¿con sonido?, ¿feed?, ¿pago?); objetivo (marca o activación); activos de marca existentes; restricciones (créditos, herramientas, plazo).
 2. **Insight.** La verdad no dicha del espectador sobre el tema. Sin insight, la pieza es decorativa.
 3. **Muro de códigos de la categoría** (sección 5). Qué espera el público de un anuncio de esta categoría. Decide qué mantienes y qué rompes.
-4. **Idea.** Un mecanismo o imagen que se cuenta en una frase. Genera muchas (ver `teoria-base.md` §2) y descarta las que se le ocurrirían a cualquiera. Prueba del vecino: si pones el logo de un competidor y funciona igual, no hay idea.
+4. **Idea.** Un mecanismo o imagen que se cuenta en una frase. Genera muchas (apéndice A) y descarta las que se le ocurrirían a cualquiera. Prueba del vecino: si pones el logo de un competidor y funciona igual, no hay idea.
 5. **Mood y registro.** Un mood dominante instalado en los primeros segundos y 2-4 marcadores que escalan hacia el clímax (modelo mood-cue de Greg M. Smith). Un registro dominante y como mucho un giro.
 6. **Sonido primero.** Decide música (o su ausencia), voz y el papel del silencio ANTES de los planos. Muchos directores trabajan así (Wong Kar-wai, Leone, Wright, Tarantino). Haz el animatic con el sonido.
 7. **Mapa de ritmo.** Asigna a cada tramo un modo: energía, peso o respiro (sección 3).
@@ -161,7 +161,7 @@ Una referencia de Erik se desmonta así antes de usarla: qué se buscaba hacer s
 
 ---
 
-## 7. Producción con IA (resumen; detalle en `teoria-base.md` §7 y `de-idea-a-pieza.md`)
+## 7. Producción con IA (resumen; detalle en el apéndice A y `de-idea-a-pieza.md`)
 
 - Planifica como Bong o Wright (shot list cerrada, animatic) y genera como Malick (muchas variaciones dentro de cada plano).
 - La contención ayuda también técnicamente: plano largo con cámara casi quieta da menos errores de IA.
@@ -216,6 +216,8 @@ Señala qué respuestas son inferencia tuya. Si una respuesta es "no", arregla a
 - **Shot list de producción** con prompts.
 - **Notas de montaje** para Remotion/DaVinci: cortes, modos, sonido por evento, mezcla.
 - **Crítica** con la plantilla de la sección 8.
+
+Para el proceso de agencia (cliente, moodboard, guion, aprobaciones, redes y rutina creativa), usa la skill `agencia-creativa-workflow`.
 
 ---
 
