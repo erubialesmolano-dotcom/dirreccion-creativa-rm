@@ -131,6 +131,12 @@ Usa `assets/remotion-edit-kit/src/v2/` (catálogo, sección «Kit v2»). Los nú
 | Flash | ~2 f | `LeakCorte`, `pulsoLeak` |
 | Volumen | −14 LUFS | Máster con loudnorm a −14 / −1 dBTP |
 
+**Regla de Erik: el material decide el estilo.**
+- Si casi todo son **fotos**: motion graphics (recortes, composición, formas, tipografía, papel), no fotos a pantalla completa con empujes.
+- Si hay **vídeo** de sobra (proceso, manos, gente haciendo cosas): montaje editorial con cortes y zooms.
+- Cuenta el material antes de elegir.
+- Los planos de proceso en vídeo (alguien cosiendo, trabajando) son los que más transmiten.
+
 **Lo que necesita cualquier pieza:**
 - Material real y capas: vídeo antes que foto, recortes con alfa y sombra real, texturas con modo de fusión.
 - Formas que señalan lo que dice la voz.
@@ -162,9 +168,10 @@ Los de la **prueba a ciegas** (Erik detectó el reel del kit v2 a la primera):
 - texto que se acerca después de entrar;
 - texto letra a letra de izquierda a derecha (usa `LineaCinetica` por palabra, que es lo que hace por defecto);
 - máscara con borde duro;
-- imágenes o subtítulos que tiemblan o rebotan al aparecer;
+- imágenes o subtítulos que tiemblan o rebotan al aparecer, y cámara que oscila de lado a lado (deriva con ruido): el movimiento va siempre en una dirección;
 - film burn y látigo como adorno;
-- textos siempre abajo y centrados.
+- textos siempre abajo y centrados;
+- texto que se queda a medio aparecer (un trozo que asoma antes de su palabra).
 
 Lo que lo hace humano:
 - **los assets dirigen la historia**, no los efectos;

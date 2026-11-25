@@ -6,6 +6,7 @@ import {FPS, H, W} from './kit';
 import * as V from './demo/vitrinas';
 import {DemoV2, DEMO_V2_DURACION} from './v2/demo/DemoV2';
 import {CalcoCamara, calcoPorDefecto, metaCalco} from './v2/demo/CalcoCamara';
+import {LottieDemo} from './v2/demo/LottieDemo';
 
 const vitrinas: [string, React.FC, number][] = [
   ['WordCaptions', V.VWordCaptions, 170],
@@ -32,6 +33,7 @@ export const Root: React.FC = () => (
   <>
     <Composition id="Demo" component={Demo} durationInFrames={DEMO_DURACION} fps={FPS} width={W} height={H} defaultProps={{guias: false}} />
     <Composition id="DemoV2" component={DemoV2} durationInFrames={DEMO_V2_DURACION} fps={FPS} width={W} height={H} />
+    <Composition id="LottieDemo" component={LottieDemo} durationInFrames={60} fps={FPS} width={W} height={H} />
     <Composition id="CalcoCamara" component={CalcoCamara} durationInFrames={30} fps={FPS} width={W} height={H} defaultProps={calcoPorDefecto} calculateMetadata={metaCalco} />
     <Folder name="Componentes">
       {vitrinas.map(([id, C, d]) => (

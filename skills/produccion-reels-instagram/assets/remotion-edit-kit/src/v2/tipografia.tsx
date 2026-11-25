@@ -115,7 +115,7 @@ const EntradaPalabra: React.FC<{f: number; at: number; dur: number; modo: Entrad
   const st: React.CSSProperties = {display: 'inline-block', whiteSpace: 'pre', filter: blur > 0.05 ? `blur(${blur}px)` : undefined};
   if (modo === 'mascara') {
     // degradado vertical que sube: el borde del revelado mide el 40 % de la línea
-    const pos = 100 - pr * 100;
+    const pos = 140 - pr * 140; // a pr=0 la palabra está entera oculta (antes asomaba el 40 % de abajo)
     const m = `linear-gradient(180deg, transparent ${pos - 40}%, #000 ${pos}%)`;
     return <span style={{...st, transform: `translateY(${(1 - pr) * 0.25}em)`, WebkitMaskImage: m, maskImage: m}}>{children}</span>;
   }

@@ -14,22 +14,25 @@ export type Cam = {x: number; y: number; s: number; r: number};
 
 /**
  * Deriva de cámara medida en las referencias (investigacion/medidas/recetas/deriva.md): el 90 % de
- * los planos de ≥3 s se mueve; mediana de zoom 2 %/s (cuartil bajo 0,74) y paneo 1,6 % del ancho/s
- * (cuartil bajo 0,35). Por defecto se usa el cuartil bajo-medio (deriva que no se nota como
- * movimiento): zoom 1 %/s hacia dentro, 14 px de vaivén y 0,35° con ruido de frecuencias distintas
- * por eje. `intensidad` 0 = quieta (solo para el plano de peso).
+ * los planos de ≥3 s se mueve; mediana de zoom 2 %/s y paneo 1,6 % del ancho/s. Es un movimiento
+ * CONTINUO EN UNA DIRECCIÓN (empuje lento y, si acaso, paneo constante), nunca un vaivén: la versión
+ * con ruido de lado a lado se veía «temblar» (prueba a ciegas con Erik, 25/11/2026).
+ * `panPorS` en px/s (signo = dirección; por defecto sale de la semilla), `zoomPorS` en %/s.
+ * `temblor` solo para imitar cámara en mano en vídeo grabado, nunca sobre fotos o gráficos.
  */
-export const deriva = (f: number, {intensidad = 1, semilla = 1, px = 14, grados = 0.35, zoomPorS = 1, periodo = 150, fps = 30, temblor = 0} = {}): Cam => {
-  const t = (f / periodo) * Math.PI * 2;
-  // temblor de cámara en mano (~5 Hz). 0 por defecto: en la prueba a ciegas Erik detectó «las imágenes tiemblan»
-  // como tic de Claude. Solo para imitar cámara en mano real (vídeo grabado), nunca sobre fotos o gráficos.
+export const deriva = (
+  f: number,
+  {intensidad = 1, semilla = 1, panPorS, zoomPorS = 1, fps = 30, temblor = 0}: {intensidad?: number; semilla?: number; panPorS?: number; zoomPorS?: number; fps?: number; temblor?: number; px?: number; grados?: number; periodo?: number} = {},
+): Cam => {
+  const t = f / fps;
+  const dir = ruido1(semilla * 12.9898, semilla) >= 0 ? 1 : -1;
+  const pan = (panPorS ?? 4 * dir) * t * intensidad;
   const tt = (f / 6) * Math.PI * 2;
   return {
-    x: ruido1(t, semilla) * px * intensidad + ruido1(tt, semilla + 21) * temblor,
-    y: ruido1(t * 0.83, semilla + 3) * px * 0.8 * intensidad + ruido1(tt * 1.13, semilla + 23) * temblor,
-    r: ruido1(t * 0.61, semilla + 7) * grados * intensidad,
-    // empuje continuo en logarítmico (nunca vuelve atrás) + un respiro mínimo de escala
-    s: Math.pow(1 + zoomPorS / 100, (f / fps) * intensidad) * (1 + 0.002 * intensidad * ruido1(t * 0.47, semilla + 11)),
+    x: pan + ruido1(tt, semilla + 21) * temblor,
+    y: ruido1(tt * 1.13, semilla + 23) * temblor,
+    r: 0,
+    s: Math.pow(1 + zoomPorS / 100, t * intensidad),
   };
 };
 

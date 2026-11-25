@@ -37,7 +37,7 @@ cp -r dirreccion-creativa-rm/skills/* ~/.claude/skills/
 
 1. Las reglas "un cambio cada 1-1,5 s / nunca más de 2 s" y "pop en cada palabra": ¿validadas viéndolas funcionar o heredadas de Metro Media House? Si funcionan: firma del Formato A con su porqué. Si son heredadas: modo "energía", plano de peso de 3-6 s por pieza y sonido solo en eventos de jerarquía.
 2. Qué entiende Erik por "T cut" (no es un término estándar; tres lecturas en `montaje-tecnicas.md`).
-3. Figma: la cuenta del proyecto GTA puede crear archivos aunque el asiento figure como View. Los styleframes por MCP siguen pendientes.
+3. Figma: styleframes del reel APZ en https://www.figma.com/design/mWAfosMLvIYwOSz6XcG4SR (fotos → motion graphics, vídeo → editorial; texto editable en Manrope y Bodoni Moda, colores como variables). Las fotos de archivo y fotogramas solo viven en Figma, no en el repo.
 
 ## Cómo crece
 
