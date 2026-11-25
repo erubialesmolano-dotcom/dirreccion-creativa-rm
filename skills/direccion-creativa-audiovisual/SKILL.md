@@ -38,7 +38,7 @@ Las referencias están en `references/`. Si no están en disco, léelas del repo
 | Rutina de entrenamiento y **diario de juicios de Erik** | `gusto.md` |
 | Ideación (asociación, bisociación, plantillas de Goldenberg), retórica visual (Phillips-McQuarrie, Forceville, Durand, Barthes), cámara, luz, color, Block, Eisenstein | `teoria-base.md` |
 
-Complementa a `director-creativo-kleon` (mentalidad y promoción); esta skill es el oficio. Skills hermanas: `motion-remotion` (curvas, cámara, zooms, motion graphics, Figma → Remotion), `blender-camara-3d` (cámara y previs 3D), `video-historia-remotion` (Formato A de Milionegle), `agencia-creativa-workflow` (cliente, aprobaciones). Si existe `cerebro-erik`, consulta allí correcciones y aprendizajes previos antes de proponer.
+Complementa a `director-creativo-kleon` (mentalidad y promoción); esta skill es el oficio. **Si la pieza es contenido orgánico de redes (series, formatos repetibles, producción semanal), usa `direccion-creativa-redes`; esta skill es para campañas y piezas únicas.** Skills hermanas: `motion-remotion` (curvas, cámara, zooms, motion graphics, Figma → Remotion), `blender-camara-3d` (cámara y previs 3D), `video-historia-remotion` (Formato A de Milionegle), `agencia-creativa-workflow` (cliente, aprobaciones). Si existe `cerebro-erik`, consulta allí correcciones y aprendizajes previos antes de proponer.
 
 ---
 

@@ -11,11 +11,12 @@ Idea de fondo: el impacto sale de la **contención racionada** (un plano sosteni
 | Skill | Qué hace | Referencias |
 |---|---|---|
 | `skills/direccion-creativa-audiovisual` | Proceso, jerarquía de decisión (Murch), modos de ritmo, reglas de emoción, sonido, composición, diferenciación de categoría y registro, crítica obligatoria | emoción, diferenciación y registro, composición, sonido y música, licencias, técnicas de montaje, directores, casos desmontados, de la idea a la pieza, limpio vs amateur, gusto (diario de juicios), teoría base |
+| `skills/direccion-creativa-redes` | Contenido orgánico: identidad asociativa (valores → asociaciones → situaciones de compra → pilares), series y formatos, ganchos y retención, marca sin anuncio, contenido sin cara, IA y etiquetado, producción sostenible, ficha y crítica de pieza | directores y equipos de redes, storytelling y formatos, identidad asociativa (lujo, B2B), producción sostenible |
 | `skills/motion-remotion` | Motion de nivel After Effects traducido a Remotion: curvas, springs, stagger, cámara 2.5D/3D, zooms, shake, speed ramps, motion blur, tipografía cinética, transiciones, acabado, Figma → Remotion | curvas y timing, cámara/zoom/3D, motion graphics, flujo Figma |
 | `skills/blender-camara-3d` | Blender 5.x por script o MCP, cámara con porqué, previs para IA generativa, puente `shot.json`/`camera.json` con Remotion | pipeline Blender completo con código probado |
 | `skills/video-historia-remotion` | **Borrador v2** del Formato A de Milionegle con el porqué de cada regla y las correcciones técnicas. Tiene decisiones pendientes de Erik marcadas con ⚠️ | auditoría 2026 |
 
-`investigacion/` guarda los dos informes, todas las notas en bruto con fuentes (tres rondas) y las versiones anteriores de las skills.
+`investigacion/` guarda los dos informes, todas las notas en bruto con fuentes (cuatro rondas; la cuarta, de redes) y las versiones anteriores de las skills.
 
 ## Instalar
 
