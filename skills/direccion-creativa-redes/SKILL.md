@@ -5,6 +5,8 @@ description: Dirección creativa para contenido orgánico de redes (Reels, TikTo
 
 # Dirección creativa para redes (orgánico)
 
+> **Antes de producir nada:** usa `direccion-creativa-audiovisual` y su fase obligatoria de desarrollo de recursos (`references/desarrollo-de-recursos.md` de esa skill, o https://raw.githubusercontent.com/erubialesmolano-dotcom/direccion-creativa-rm/main/skills/direccion-creativa-audiovisual/references/desarrollo-de-recursos.md). Sin documento de desarrollo aprobado por Erik no se guioniza, no se monta y no se renderiza. Esta skill ejecuta lo que decide ese documento.
+
 Un anuncio es una pieza; las redes son un **programa**. Aquí el trabajo del director no es hacer el mejor vídeo posible, sino diseñar un sistema que la marca pueda sostener cada semana: qué asociaciones construye, qué series repite, qué activo la hace reconocible en un fotograma, cómo se produce con los medios que hay y cómo se mide. Los principios de `direccion-creativa-audiovisual` siguen valiendo (emoción, contención, sonido, composición), pero traducidos a un formato que **se consume en el feed y se produce cada semana**.
 
 Regla de partida: **antes de idear, decide si es campaña u orgánico.** Campaña = pieza única, producción organizada (actores, localización, cámara), idea cerrada → `direccion-creativa-audiovisual`. Orgánico = formato repetible, producible con lo que hay, medido por temporada → esta skill. Una buena idea de campaña puesta en orgánico suele ser demasiado cara y demasiado "anuncio".

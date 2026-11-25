@@ -5,6 +5,8 @@ description: Hace vídeos horizontales de historia con fotos de archivo en Remot
 
 # Vídeo de historia con fotos en Remotion (estilo Milionegle · Formato A)
 
+> **Antes de producir nada:** usa `direccion-creativa-audiovisual` y su fase obligatoria de desarrollo de recursos (`references/desarrollo-de-recursos.md` de esa skill, o https://raw.githubusercontent.com/erubialesmolano-dotcom/direccion-creativa-rm/main/skills/direccion-creativa-audiovisual/references/desarrollo-de-recursos.md). Sin documento de desarrollo aprobado por Erik no se guioniza, no se monta y no se renderiza. Esta skill ejecuta lo que decide ese documento.
+
 Esta skill recoge cómo se hizo el piloto de Milionegle "Gates y Allen" y **todas las correcciones de Erik**. Las reglas de estilo de abajo ya las ha validado él: aplícalas desde el primer render, no esperes a que te las vuelva a pedir.
 
 - Proyecto de ejemplo, completo y funcionando: `C:\Users\erikr\remotion\milionegle\video` (copia en `plantilla/` dentro de esta skill).

@@ -5,6 +5,8 @@ description: Producir y editar reels de Instagram de nivel profesional de princi
 
 # Producción de reels para Instagram (de la idea al MP4)
 
+> **Antes de producir nada:** usa `direccion-creativa-audiovisual` y su fase obligatoria de desarrollo de recursos (`references/desarrollo-de-recursos.md` de esa skill, o https://raw.githubusercontent.com/erubialesmolano-dotcom/direccion-creativa-rm/main/skills/direccion-creativa-audiovisual/references/desarrollo-de-recursos.md). Sin documento de desarrollo aprobado por Erik no se guioniza, no se monta y no se renderiza. Esta skill ejecuta lo que decide ese documento.
+
 Esta skill es la parte que materializa. `direccion-creativa-redes` decide la serie y la estrategia; `direccion-creativa-audiovisual` da el criterio emocional; aquí se escribe el guion para el Instagram de hoy, se traduce a una **hoja de edición** con componentes concretos y se renderiza. Regla: **no se piden referencias para editar.** Si hay una idea, se baja a la hoja de edición con el kit. Las referencias solo se usan para calcar un estilo concreto, y entonces se **miden**, no se miran.
 
 Recursos de esta skill:

@@ -1,6 +1,6 @@
 ---
 name: direccion-creativa-audiovisual
-description: Criterio de director creativo audiovisual para Erik. Decide con porqué qué sentir, qué recurso usar y cuándo romperlo en imagen, sonido, música, montaje, composición, registro y diferenciación de categoría, y critica antes de entregar. Úsala para concebir, dirigir, montar o criticar vídeos, reels, anuncios, cortos o piezas de marca.
+description: Criterio de director creativo audiovisual para Erik, con cientos de casos, directores y recursos analizados (composición, espacio negativo, retórica visual, registro, muro de códigos, sonido, montaje). Se activa SIEMPRE que haya que hacer, montar, editar, animar o rediseñar cualquier vídeo, reel, anuncio, motion graphic, styleframe o storyboard, aunque también se use otra skill de producción, y obliga a una fase de desarrollo de recursos aprobada por Erik antes de producir. Úsala también para concebir o criticar piezas.
 ---
 
 # Dirección creativa audiovisual (capa de criterio)
@@ -19,6 +19,33 @@ Preserva la agencia de Erik: si trae una intuición, desarróllala antes de sust
 
 ---
 
+## PASO OBLIGATORIO: desarrollo de recursos antes de cualquier vídeo
+
+**Esta skill se usa siempre que se haga un vídeo**, también cuando trabajen `produccion-reels-instagram`, `motion-remotion`, `video-historia-remotion` o cualquier otra skill de producción. Esas skills ejecutan; esta decide. Si se va directo al kit de edición, todo lo analizado en `references/` se queda sin usar y la pieza sale "de Claude". Erik lo dijo así: si no se usan estos criterios al diseñar, la skill no sirve de nada.
+
+Antes de escribir guion, hacer styleframes, generar con IA, montar o renderizar:
+
+1. **Lee** (no recuerdes) las referencias que toquen. Como mínimo: `composicion.md`, `diferenciacion-registro.md`, `teoria-base.md`, `directores.md` y `casos.md`.
+2. **Escribe el documento de desarrollo** (`desarrollo.md` en la carpeta del proyecto) con la plantilla de `references/desarrollo-de-recursos.md`:
+   - brief e insight;
+   - muro de códigos y qué se rompe;
+   - 10 ideas pasadas por las 6 plantillas, y la elegida;
+   - figura retórica dominante;
+   - registro y mood;
+   - mínimo 3 referentes con el mecanismo que se roba;
+   - sistema visual: el material decide el estilo (fotos → motion graphics, vídeo → editorial), composición y espacio negativo, paleta y tipografía;
+   - sonido primero;
+   - mapa de ritmo (energía, peso, respiro);
+   - **tabla de recursos plano a plano**, con emoción, recurso, por qué con fuente y cuándo romperlo;
+   - lo que no se va a hacer;
+   - la crítica de la sección 8.
+3. **Puerta:** enseña a Erik la idea, los referentes, el ritmo y la tabla. No se produce nada hasta que diga que sí.
+4. **Produce contra la tabla:** ningún recurso entra sin su fila y su porqué.
+
+Excepciones: solo si Erik dice «sin desarrollo», o si es una corrección puntual de una pieza que ya tiene documento aprobado. En ese caso se actualiza la fila afectada.
+
+Señal de que te lo has saltado: no sabes decir de qué caso, director o estudio sale una decisión, o elegiste un recurso porque estaba en el kit. Para y vuelve al punto 1.
+
 ## 0. Mapa de referencias (lee solo lo que la tarea necesite)
 
 Las referencias están en `references/`. Si no están en disco, léelas del repositorio: `https://raw.githubusercontent.com/erubialesmolano-dotcom/direccion-creativa-rm/main/skills/direccion-creativa-audiovisual/references/<archivo>`.
@@ -33,6 +60,7 @@ Las referencias están en `references/`. Si no están en disco, léelas del repo
 | J, L, match cut, smash, cortes ocultos, speed ramp… con fotogramas | `montaje-tecnicas.md` |
 | Qué decidió un director o montador y por qué (Nolan, Fincher, Wong Kar-wai, Glazer, Schoonmaker…) | `directores.md` |
 | Casos desmontados (Anthropic ×3, Nike, Apple, Amazon, Google, Honda, Guinness, motion de marcas tech…) | `casos.md` |
+| **Fase de desarrollo obligatoria: plantilla del documento y puerta de aprobación** | `desarrollo-de-recursos.md` |
 | Pipeline brief → guion a dos columnas → tratamiento → animatic → shot list, con controles | `de-idea-a-pieza.md` |
 | Acabado limpio frente a amateur, tics de la IA | `limpio-premium.md` |
 | Rutina de entrenamiento y **diario de juicios de Erik** | `gusto.md` |

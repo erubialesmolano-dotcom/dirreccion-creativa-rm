@@ -5,6 +5,8 @@ description: Motion design de nivel After Effects traducido a Remotion. Curvas y
 
 # Motion de nivel estudio en Remotion
 
+> **Antes de producir nada:** usa `direccion-creativa-audiovisual` y su fase obligatoria de desarrollo de recursos (`references/desarrollo-de-recursos.md` de esa skill, o https://raw.githubusercontent.com/erubialesmolano-dotcom/direccion-creativa-rm/main/skills/direccion-creativa-audiovisual/references/desarrollo-de-recursos.md). Sin documento de desarrollo aprobado por Erik no se guioniza, no se monta y no se renderiza. Esta skill ejecuta lo que decide ese documento.
+
 Objetivo: que nada se vea robótico ni de plantilla. Lo robótico casi siempre es uno de estos fallos: todo empieza a la vez, todo dura lo mismo, curvas lineales o simétricas, rebote en todo, nada reposa, diagonales rectas, blur donde no toca, cámara que se mueve sin motivo. Esta skill da los números y su porqué. La decisión de qué se siente en cada tramo la toma `direccion-creativa-audiovisual`; esta skill la ejecuta.
 
 Referencias (en `references/`; si no están, en `https://raw.githubusercontent.com/erubialesmolano-dotcom/direccion-creativa-rm/main/skills/motion-remotion/references/<archivo>`):
