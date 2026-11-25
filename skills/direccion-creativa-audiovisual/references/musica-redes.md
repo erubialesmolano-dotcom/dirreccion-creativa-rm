@@ -28,6 +28,12 @@ Esto va antes de enamorarse de una canción:
   - No se descarga el mp3 de una canción comercial para hornearlo en el render.
   - Para música propia de la pieza, se usa librería con licencia de cliente (`licencias-librerias.md`) o música hecha a medida.
   - Para usar un audio en tendencia, se añade dentro de la app desde una cuenta que lo tenga disponible (creador o personal de un fundador). Antes, el cliente asume ese riesgo por escrito.
+- **Cuenta personal (o de creador con la biblioteca completa):** pregunta siempre qué tipo de cuenta es; no lo supongas. Si tiene la biblioteca con licencia:
+  - se puede usar la canción real, incluida la del original de una parodia, siempre que la app la ofrezca;
+  - la canción **no se hornea en el render**: se exporta el vídeo con voz y efectos y la canción se añade en Instagram o en Edits;
+  - en local, la canción sirve solo como pista guía para cuadrar los cortes con `mapa_musical.py`; esa pista no se publica;
+  - en la app hay que comprobar tres cosas: que la canción esté disponible en el país, cuánto deja usar seguido y si se puede bajar o cortar por tramos (si no, los silencios se hacen con las secciones de la canción);
+  - riesgo: Meta dice que la biblioteca es para uso no comercial; una cuenta que promociona su negocio puede acabar con el audio silenciado. Lo asume la marca.
 - **Parodias de canciones icónicas** (tráileres de GTA, películas): la canción original casi nunca se puede usar. Se roba el **mecanismo**:
   - época y género (la canción de los 80 del tráiler 2 de GTA VI);
   - tempo;
