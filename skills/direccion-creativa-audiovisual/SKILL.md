@@ -56,6 +56,7 @@ Las referencias están en `references/`. Si no están en disco, léelas del repo
 | No parecer "otro anuncio de tech/moda/coach"; decidir el peso o registro (solemne, cálido, irónico, eufórico) | `diferenciacion-registro.md` |
 | Encuadre, mirada, centro vs tercios, triángulos, líneas, peso visual, Gestalt, 9:16, frases de prompt | `composicion.md` |
 | Sonido, silencio, música, voz, mezcla, identidad sonora | `sonido-musica.md` |
+| **Encontrar la canción** (audio en tendencia, nicho, dónde buscar), cuántas músicas, cuándo entra, sube y para, separar pistas con Demucs, efectos; script `scripts/mapa_musical.py` | `musica-redes.md` |
 | Licencias de música/SFX/voz para clientes (con fecha; caduca) | `licencias-librerias.md` |
 | J, L, match cut, smash, cortes ocultos, speed ramp… con fotogramas | `montaje-tecnicas.md` |
 | Qué decidió un director o montador y por qué (Nolan, Fincher, Wong Kar-wai, Glazer, Schoonmaker…) | `directores.md` |

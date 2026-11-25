@@ -32,6 +32,7 @@ Antes de proponer nada, abre y lee estos archivos. Citar de memoria no vale.
 | Qué decidió un director y por qué | `directores.md` |
 | Casos desmontados | `casos.md` |
 | Sonido y silencio | `sonido-musica.md` |
+| Elegir y montar la música, efectos | `musica-redes.md` |
 | Técnicas de montaje | `montaje-tecnicas.md` |
 | Acabado premium y tics | `limpio-premium.md` |
 | Gustos y correcciones de Erik | `gusto.md` y `cerebro-erik`, si existe |
@@ -85,6 +86,7 @@ Guárdalo como `desarrollo.md` en la carpeta del proyecto. Tiene que ser corto y
 - Biblia de 5-8 constantes.
 
 **I. Sonido primero.**
+- Sigue el método de `musica-redes.md`: papel de la música, licencia, búsqueda en el nicho y en tendencias, 3 finalistas medidas con `scripts/mapa_musical.py`, cuántas canciones y hoja de sonido.
 - Música o su ausencia.
 - Voz.
 - Dónde va el silencio construido.
