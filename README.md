@@ -12,24 +12,24 @@ Idea de fondo: el impacto sale de la **contención racionada** (un plano sosteni
 |---|---|---|
 | `skills/direccion-creativa-audiovisual` | Proceso, jerarquía de decisión (Murch), modos de ritmo, reglas de emoción, sonido, composición, diferenciación de categoría y registro, crítica obligatoria | emoción, diferenciación y registro, composición, sonido y música, licencias, técnicas de montaje, directores, casos desmontados, de la idea a la pieza, limpio vs amateur, gusto (diario de juicios), teoría base |
 | `skills/direccion-creativa-redes` | Contenido orgánico: identidad asociativa (valores → asociaciones → situaciones de compra → pilares), series y formatos, ganchos y retención, marca sin anuncio, contenido sin cara, IA y etiquetado, producción sostenible, ficha y crítica de pieza | directores y equipos de redes, storytelling y formatos, identidad asociativa (lujo, B2B), producción sostenible |
-| `skills/produccion-reels-instagram` | De la idea al MP4: guion para el Instagram de 2026 (skip rate, envíos, originalidad), hoja de edición plano a plano, kit de 24 componentes de Remotion probado y análisis medido de referencias con validación de calco ≤4 px | Instagram y guion, catálogo del kit, análisis de referencias; `assets/remotion-edit-kit/`, `scripts/analisis-referencias/` |
+| `skills/produccion-reels-instagram` | De la idea al MP4: guion para el Instagram de 2026 (skip rate, envíos, originalidad), hoja de edición plano a plano, kit de 24 componentes de Remotion y **kit v2** (cámara viva, texturas, recortes, shape layers, transiciones y curvas calcadas), con números medidos en ~190 referencias, lista de tics de Claude y validación de calco ≤4 px | Instagram y guion, catálogo del kit, análisis de referencias; `assets/remotion-edit-kit/`, `scripts/analisis-referencias/` |
 | `skills/motion-remotion` | Motion de nivel After Effects traducido a Remotion: curvas, springs, stagger, cámara 2.5D/3D, zooms, shake, speed ramps, motion blur, tipografía cinética, transiciones, acabado, Figma → Remotion | curvas y timing, cámara/zoom/3D, motion graphics, flujo Figma |
 | `skills/blender-camara-3d` | Blender 5.x por script o MCP, cámara con porqué, previs para IA generativa, puente `shot.json`/`camera.json` con Remotion | pipeline Blender completo con código probado |
 | `skills/video-historia-remotion` | **Borrador v2** del Formato A de Milionegle con el porqué de cada regla y las correcciones técnicas. Tiene decisiones pendientes de Erik marcadas con ⚠️ | auditoría 2026 |
 
-`kit/` tiene el kit de edición en Remotion (con `docs/demo.mp4`) y el analizador de referencias. `investigacion/` guarda los dos informes, todas las notas en bruto con fuentes (seis rondas; la cuarta, de redes; la quinta, ~67 casos de redes; la sexta, Instagram y guion) y las versiones anteriores de las skills.
+`kit/` tiene el kit de edición en Remotion (v1 en `src/kit/`, v2 en `src/v2/`, catálogo en `CATALOGO.md`) y el analizador de referencias (`analizar.py`, `dataset.py`, `recetas.py`, `medidas_manuales.py`, `calcar_camara.py`, `calco.py`). `investigacion/medidas/` guarda el dataset, las recetas por efecto y los calcos validados. `investigacion/` guarda los dos informes, todas las notas en bruto con fuentes (seis rondas; la cuarta, de redes; la quinta, ~67 casos de redes; la sexta, Instagram y guion) y las versiones anteriores de las skills.
 
 ## Instalar
 
 **Claude Code** (todas las skills):
 
 ```bash
-git clone https://github.com/erubialesmolano-dotcom/direccion-creativa-rm.git
+git clone https://github.com/erubialesmolano-dotcom/dirreccion-creativa-rm.git
 mkdir -p ~/.claude/skills
-cp -r direccion-creativa-rm/skills/* ~/.claude/skills/
+cp -r dirreccion-creativa-rm/skills/* ~/.claude/skills/
 ```
 
-**Claude (app / Cowork)**: comprime cada carpeta de `skills/` (con su `references/`) en un .zip y súbela como skill. Si solo se guarda el `SKILL.md`, la skill sigue funcionando y lee las referencias desde este repositorio (`raw.githubusercontent.com`).
+**Claude (app / Cowork)**: `python scripts/empaquetar_skills.py` deja un .zip por skill en `dist/`; súbelos en Ajustes → Capacidades → Skills. Si solo se guarda el `SKILL.md`, la skill sigue funcionando y lee las referencias desde este repositorio (`raw.githubusercontent.com`).
 
 **No sustituyas `video-historia-remotion`** hasta resolver las decisiones pendientes y fusionar el `references/correcciones.md` de la cuenta actual.
 
@@ -37,7 +37,7 @@ cp -r direccion-creativa-rm/skills/* ~/.claude/skills/
 
 1. Las reglas "un cambio cada 1-1,5 s / nunca más de 2 s" y "pop en cada palabra": ¿validadas viéndolas funcionar o heredadas de Metro Media House? Si funcionan: firma del Formato A con su porqué. Si son heredadas: modo "energía", plano de peso de 3-6 s por pieza y sonido solo en eventos de jerarquía.
 2. Qué entiende Erik por "T cut" (no es un término estándar; tres lecturas en `montaje-tecnicas.md`).
-3. Plan de Figma: la cuenta conectada figura como Starter con asiento View (20 lecturas/mes, sin escritura). El flujo Figma → Remotion necesita Professional con asiento Full.
+3. Figma: la cuenta del proyecto GTA puede crear archivos aunque el asiento figure como View. Los styleframes por MCP siguen pendientes.
 
 ## Cómo crece
 

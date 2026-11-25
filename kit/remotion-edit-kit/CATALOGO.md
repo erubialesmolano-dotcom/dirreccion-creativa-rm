@@ -312,3 +312,36 @@ Fotogramas a 30 fps, relativos al inicio de la receta. Cada receta está montada
 - `Parallax25D` no recorta las capas: dales overscan (≈ 200 px por lado) o se verán sus bordes al mover la cámara en X/Y.
 - La orientación por defecto de `GlassSlats` (bandas horizontales) es una inferencia: las 7 lamas medidas casan con 1920 / 285 ≈ 6,7. Si la referencia era de costillas verticales en 16:9, usa `orientacion="vertical"`.
 - Los efectos de `public/sfx/` son sintéticos (`scripts/generar-sfx.mjs`), solo para el demo. La mezcla del demo no lleva voz.
+
+---
+
+## Kit v2 · `src/v2/` (que no parezca editado por Claude)
+
+Todo sale de medidas: unas 190 referencias en `investigacion/medidas/` (dataset, recetas por efecto y `calcos.md`). Solo assets reales: vídeo, foto, recortes, texturas y modos de fusión. Nada se queda quieto.
+
+```tsx
+import {Empuje, Deriva, Capas, Clip, rampa, Recorte, Foto, Trazo, Flecha, LineaCinetica, Barrido, ZoomRadial, FilmBurn, Glitch, LeakCorte, Pelicula, keys, curva, CALCOS} from './v2';
+```
+
+| Módulo | Piezas | De dónde salen los números |
+|---|---|---|
+| `curvas.ts` | `keys()` con keyframes de AE `{f, v, infOut, infIn, velOut, velIn}`; `inercia`, `secundaria`, `geometrica` (látigo cosechado, r = 0,82/f); **`CALCOS`** (`zoomAlCorte`, `latigo`, `asentamiento`) con `curva()` | Curvas calcadas contra referencias reales con p95 ≤ 4 px (`investigacion/medidas/calcos.md`) |
+| `camara.tsx` | `deriva` / `Deriva` (zoom 1 %/s, 14 px, 0,35°), `Empuje` (escala con influencias 0,15 / 0,85 y desenfoque por velocidad), `Capas` (parallax con escala separada y profundidad de campo), `BlurReal` | `recetas/deriva.md`: el 90 % de los planos largos se mueve, con zoom mediano de 2 %/s |
+| `texturas.tsx` | `Grano`, `Polvo`, `LightLeak`, `Acabado`, `Pelicula`, `pulsoLeak` (vídeos en `public/texturas/`, de `scripts/generar_texturas.py`) | Flashes de unos 2 f (`recetas/flash_y_leak.md`) |
+| `assets.tsx` | `Foto` (recorte en px de la fuente, borde de papel, sombra real), `Recorte` (PNG con alfa y borde de pegatina), `Clip` (time remap), **`rampa()`** (2,4× → 0,2× en 8 f), `homografia` / `PantallaEn` | `recetas/rampa_velocidad.md`: relación mediana de 12,6× en 8 f |
+| `formas.tsx` | `Trazo` (línea, rotulador, pespunte, tiza), `Flecha`, `CirculoEnfasis`, `Subrayado`, `CajaLlamada`, `BarrasCrecen`, `RutaMapa`, `DentroDe` / `TrackMatte` (track matte alfa o luma), `revelaCirculo` | `recetas/entradas_graficos.md`: el 90 % del área en 9 f, overshoot del 7 %, un 24 % en corte seco |
+| `transiciones.tsx` | `Barrido` (`perfil="latigo"` calcado), `ZoomRadial`, `Viaje`, `Atravesar`, `FilmBurn`, `LeakCorte`, `Glitch` (separación RGB por canales), `Iris`, `MatchMove` | `recetas/latigo.md`, `zoom_rapido_*.md`, `glitch_rgb.md` |
+| `tipografia.tsx` | `LineaCinetica`: tres niveles de jerarquía, entradas por letra (máscara, sube, escala, desenfoque) y fuentes de marca (`fuente`, `fuenteAcento`, `pesos`) | Texto en cambios de unos 4 f en las referencias |
+| `lottie.tsx` | `LottieAsset` | — |
+
+**Demo:** composición `DemoV2`, con 5 planos y 4 transiciones con motivo. Necesita `public/local/`, que no se sube.
+
+**Calcar un movimiento nuevo de una referencia:**
+
+```bash
+python ../analisis-referencias/calcar_camara.py REF.mp4 --desde A --hasta B --out public/local/calco_x
+npx remotion render src/index.ts CalcoCamara out/calco_x.mp4 --props=public/local/calco_x/props.json
+python ../analisis-referencias/calco.py REF.mp4 out/calco_x.mp4 --desde A --hasta B --offset -A   # p95 ≤ 4 px
+```
+
+**Trabajo de cliente:** va en `src/local/` (con su propio `index.ts`) y `public/local/`; las dos carpetas están en .gitignore.

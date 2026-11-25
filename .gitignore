@@ -2,3 +2,12 @@ node_modules/
 out/
 .remotion/
 __pycache__/
+
+# assets reales de Erik para demos (no se suben: repo público)
+kit/remotion-edit-kit/public/local/
+dist/
+kit/remotion-edit-kit/src/local/
+
+# tiras de contacto de reels de terceros: solo análisis interno, no se republican
+investigacion/medidas/recetas/img/
+skills/produccion-reels-instagram/references/recetas/img/

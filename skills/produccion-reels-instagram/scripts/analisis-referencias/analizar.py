@@ -618,7 +618,10 @@ def silencios(ruta: str, umbral_db: float, min_s: float) -> list:
 def alineacion(cortes_t: list, onsets: np.ndarray, fps: float, tol_f: float, dur: float,
                semilla: int = 7, iteraciones: int = 5000) -> dict:
     if not len(cortes_t) or not len(onsets):
-        return {"cortes": len(cortes_t), "aciertos": 0, "pct": None}
+        # sin cortes o sin onsets (un solo plano, audio en silencio): mismas claves que el caso normal
+        return {"cortes": len(cortes_t), "aciertos": 0, "pct": None, "en_el_fotograma": 0, "a_1f": 0,
+                "control_aleatorio_pct": None, "control_p95_pct": None, "p_valor": None,
+                "desfase_mediano_f_aciertos": None, "desfases_f": []}
     on = np.sort(np.asarray(onsets))
 
     def dist(ts):

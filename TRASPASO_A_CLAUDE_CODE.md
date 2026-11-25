@@ -66,3 +66,12 @@ Actualizar `skills/produccion-reels-instagram` (catálogo, recetas medidas, list
 - Transiciones de manual (fundido, deslizamiento) en lugar de match moves.
 - Sonido escaso o un efecto igual en cada evento.
 - Subtítulos genéricos sin jerarquía (sin tamaños ni pesos que marquen la palabra importante).
+- Cortes clavados a cada beat (las referencias cortan al beat igual que el azar).
+
+### Añadidos en la Fase 5 (sobrecorrección, medida con `analizar.py` frente a 3 referencias)
+- Ráfagas en todo el vídeo: 82 planos y el 74 % de ≤ 8 f, frente a 24-41 planos y un 14 % de ≤ 8 f.
+- Empujes exagerados: 17 %/s de zoom frente a 1-3 %/s.
+- Frases enteras en pantalla: el texto cambia cada 22 f frente a 6-8 f (trozos de 1-3 palabras).
+- Cámara sin temblor de mano (0 px frente a 0,2-3 px).
+- Audio sin masterizar: −18 LUFS frente a −14.
+

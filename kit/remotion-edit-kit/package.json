@@ -1,6 +1,6 @@
 {
   "name": "remotion-edit-kit",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "Kit de componentes de edición en Remotion para reels verticales 1080×1920 a 30 fps",
   "scripts": {
@@ -14,7 +14,14 @@
   },
   "dependencies": {
     "@remotion/cli": "4.0.547",
+    "@remotion/google-fonts": "4.0.547",
+    "@remotion/lottie": "4.0.547",
+    "@remotion/motion-blur": "4.0.547",
     "@remotion/noise": "4.0.547",
+    "@remotion/paths": "4.0.547",
+    "@remotion/shapes": "4.0.547",
+    "@remotion/transitions": "4.0.547",
+    "lottie-web": "5.12.2",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "remotion": "4.0.547"

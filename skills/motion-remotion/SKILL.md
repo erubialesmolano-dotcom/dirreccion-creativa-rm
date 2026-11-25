@@ -197,3 +197,14 @@ Remotion Studio (≥4.0.475) permite arrastrar valores, crear keyframes y editar
 9. ¿Más de 2-3 efectos de look notables?
 10. ¿Cumple la biblia de constantes en todos los planos?
 11. Render de fotogramas clave (inicio, pico, final de cada movimiento) y míralos antes de dar la pieza por buena.
+
+## 14. Números medidos en referencias reales (kit v2)
+
+Lo de arriba es oficio. Esto son medidas: unas 190 referencias analizadas y curvas calcadas con p95 ≤ 4 px. Detalle en `produccion-reels-instagram/references/recetas/`; código en `remotion-edit-kit/src/v2/`.
+- **Zoom rápido:** casi siempre ease-out. La excepción es el **zoom al corte**: acelera hasta el corte (×1,62 en 5 f, velIn 2,4) y no se asienta (`CALCOS.zoomAlCorte`).
+- **Látigo:** sin rampa de salida, el 87 % del recorrido en 7 f y se posa el 13 % en 14 f; **mientras barre, la escala baja un 3,6 %** (`CALCOS.latigo`).
+- **Deriva:** zoom de 1-2 %/s, más un temblor de cámara en mano de 0,2-3 px. Un empuje de +15 % por plano ya es un tic.
+- **Rampa de velocidad:** 12× en 8 f, mucho más brusca de lo que parece.
+- **Entradas:** 9 f, overshoot del 7 %; un 24 % entra en corte seco.
+- **Cortes:** no van al beat más que por azar.
+- **Para calcar una curva nueva:** `calcar_camara.py`, luego render de `CalcoCamara` y validación con `calco.py`. El medidor y el validador tienen que ser el mismo algoritmo.

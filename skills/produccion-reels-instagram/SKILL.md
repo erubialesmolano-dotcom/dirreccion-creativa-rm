@@ -109,18 +109,56 @@ Límites conocidos del kit (ver catálogo): `GlassSlats` por defecto en bandas h
 
 ---
 
-## 4b. Que no parezca editado por Claude
+## 4b. Que no parezca editado por Claude (kit v2, con números medidos)
 
-El kit v1 resuelve el timing, pero solo con formas y texto **parece hecho por Claude**. Un editor de After Effects trabaja con **material real y capas**:
-- **Assets reales siempre**: fotos y vídeo (`staticFile` + `<Img>` / `<OffthreadVideo>`), sujetos recortados con `rembg` (PNG con alfa, sombra y, si encaja, borde de papel), capturas de UI reales, logos en SVG. Nunca placeholders en una pieza final.
-- **Texturas y luz**: grano real, polvo, papel, light leaks y film burn como capas de vídeo con modo de fusión, más `Finish`.
-- **Motion graphics de shape layers**: trazos que se dibujan (`@remotion/paths`), flechas, círculos y subrayados que señalan lo que dice la voz, cajas de llamada, contadores, texto dentro de formas, mates.
-- **Cámara viva**: deriva sutil continua, parallax de recortes, empujes con curva asimétrica, desenfoque por velocidad. Quieto solo el plano de peso.
-- **Curvas distintas por propiedad** y acción secundaria (los hijos llegan 1-3 f después). Nunca el mismo pop en todo.
-- **Transiciones que mueven algo** (match move, zoom con blur, speed ramp), no fundidos ni deslizamientos de manual.
-- **Sonido por capas** en cada evento de jerarquía, distinto en cada uno.
+Usa `assets/remotion-edit-kit/src/v2/` (catálogo, sección «Kit v2»). Los números salen de unas 190 referencias medidas (`references/recetas/`) y de calcos validados con p95 ≤ 4 px.
 
-Tics que delatan a Claude: fondo cuadriculado con tarjeta blanca centrada, tipografía de sistema en un solo peso, todo centrado y alineado, placeholders, el mismo spring en todo, cámara quieta, colores planos sin textura, subtítulos sin jerarquía. Si la pieza tiene dos o más, no se entrega. El plan para llevar el kit a este nivel con referencias medidas está en `TRASPASO_A_CLAUDE_CODE.md` del repositorio.
+**Valores de referencia (mediana de las referencias, a 30 fps):**
+
+| Medida | Referencias | Cómo se consigue con el kit |
+|---|---|---|
+| Plano mediano | 1,05 s; solo el 14 % de los planos dura ≤ 8 f | Las ráfagas en corte seco son un recurso puntual (gancho, montaje métrico), no todo el vídeo |
+| Cortes por segundo | 0,76 | — |
+| Cortes en el beat | Igual que el azar (66 % frente a 57 % del control) | Corta al final de la idea de la voz, no a cada golpe de música |
+| Planos fijos | 33 %; casi nunca un plano largo quieto (el 90 % de los de ≥ 3 s se mueve) | `deriva` en los largos; quieto solo el plano de peso |
+| Zoom de cámara | 0,8-3,5 %/s | `Empuje` de +5-8 % en 60-80 f; nunca +15 % por plano |
+| Temblor de cámara en mano | 0,2-3 px | `deriva` lo lleva (`temblor` 0,6 px) |
+| Zoom rápido | Ease-out (arranca de golpe y se posa); el zoom al corte, en cambio, acelera | `Empuje` por defecto; `CALCOS.zoomAlCorte` |
+| Látigo | 87 % del recorrido en 7 f, se posa en 14 f y la escala baja un 3,6 % | `<Barrido perfil="latigo">` |
+| Rampa de velocidad | 12× en 8 f | `rampa()` (2,4× → 0,2×) |
+| Entrada de gráficos | 9 f hasta el 90 %, overshoot del 7 %, un 24 % en corte seco | `LineaCinetica` (`durLetra` 9); recortes en corte seco |
+| Cambio de texto en pantalla | Cada 6-8 f: trozos de 1-3 palabras | Trozos cortados en la puntuación, uno cada vez |
+| Flash | ~2 f | `LeakCorte`, `pulsoLeak` |
+| Volumen | −14 LUFS | Máster con loudnorm a −14 / −1 dBTP |
+
+**Lo que necesita cualquier pieza:**
+- Material real y capas: vídeo antes que foto, recortes con alfa y sombra real, texturas con modo de fusión.
+- Formas que señalan lo que dice la voz.
+- Curvas distintas por propiedad.
+- Transiciones con motivo (que algo de un plano lleve al siguiente).
+- Sonido solo lo pedido: clics y pops, sin risers.
+
+**Tics de Claude (si hay dos, no se entrega).**
+
+Los de partida:
+- fondo cuadriculado con tarjeta blanca centrada;
+- tipografía de sistema en un solo peso;
+- todo centrado;
+- placeholders;
+- el mismo spring en todo;
+- cámara quieta;
+- colores planos;
+- subtítulos sin jerarquía;
+- cortes clavados a cada beat.
+
+Los de **sobrecorrección**, medidos en la Fase 5 (reel APZ con el kit v2):
+- ráfagas en todo el vídeo (82 planos y el 74 % de ≤ 8 f, frente a 24-41 planos en las referencias);
+- empujes exagerados (17 %/s de zoom frente a 1-3 %/s);
+- frases enteras en pantalla (el texto cambia cada 22 f frente a 6-8);
+- cámara sin temblor (0 px);
+- audio a −18 LUFS.
+
+**Antes de entregar**, mide la pieza con `analizar.py` y compárala con 3 referencias de la misma duración (`dataset.py`). Si alguna medida sale del rango de las referencias, hay que justificarla.
 
 ---
 

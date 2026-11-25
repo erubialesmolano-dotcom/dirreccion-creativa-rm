@@ -21,6 +21,8 @@ más onion_resumen.png.
 """
 from __future__ import annotations
 
+import sys
+if hasattr(sys.stdout, "reconfigure"): sys.stdout.reconfigure(encoding="utf-8")
 import argparse
 import csv
 import json
