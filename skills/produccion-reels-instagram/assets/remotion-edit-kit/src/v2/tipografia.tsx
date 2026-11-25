@@ -7,7 +7,6 @@ import {Easing, interpolate, useCurrentFrame} from 'remotion';
 import {loadFont as cargarInter} from '@remotion/google-fonts/Inter';
 import {loadFont as cargarSerif} from '@remotion/google-fonts/InstrumentSerif';
 import {loadFont as cargarGrotesk} from '@remotion/google-fonts/SpaceGrotesk';
-import {inercia} from './curvas';
 
 export const SANS = cargarInter('normal', {weights: ['400', '500', '600', '700', '800', '900'], subsets: ['latin', 'latin-ext']}).fontFamily;
 export const SERIF = cargarSerif('normal', {subsets: ['latin', 'latin-ext']}).fontFamily;
@@ -24,11 +23,11 @@ export type Palabra = {
   nivel?: 0 | 1 | 2;
 };
 
-export type EntradaLetra = 'sube' | 'mascara' | 'escala' | 'desenfoque';
+export type EntradaLetra = 'palabra' | 'sube' | 'mascara' | 'escala' | 'desenfoque';
 
 /**
  * Línea de texto cinética por letra. Cada letra entra `escalon` f después de la anterior (1 f por
- * defecto) con expo out; las de nivel 2 llegan con inercia (un pequeño rebote proporcional) y en
+ * defecto) con expo out (solo con `porLetra`; por defecto entra palabra a palabra, enfocándose); las de nivel 2 van en
  * serif itálica 1,25× más grandes. Después de entrar, la línea deriva 1-2 % (no se congela).
  */
 export const LineaCinetica: React.FC<{
@@ -47,7 +46,11 @@ export const LineaCinetica: React.FC<{
   fuente?: string;
   fuenteAcento?: string;
   pesos?: [number, number, number];
-}> = ({palabras, x = 80, y = 900, tam = 96, color = '#0B0B0C', acento = '#C2412D', alinear = 'left', entrada = 'mascara', escalon = 1, durLetra = 9, sombra, fuente = SANS, fuenteAcento = SERIF_IT, pesos = [600, 800, 400]}) => {
+  /** animar letra a letra (barrido izquierda → derecha). Erik lo detecta como «hecho por Claude»: solo si se pide */
+  porLetra?: boolean;
+  /** el texto se acerca después de entrar (1 = 1,5 %). Delata a Claude: 0 por defecto */
+  acercar?: number;
+}> = ({palabras, x = 80, y = 900, tam = 96, color = '#0B0B0C', acento = '#C2412D', alinear = 'left', entrada = 'palabra', escalon = 1, durLetra = 9, sombra, fuente = SANS, fuenteAcento = SERIF_IT, pesos = [600, 800, 400], porLetra = false, acercar = 0}) => {
   const f = useCurrentFrame();
   const t0 = palabras[0]?.at ?? 0;
   const deriva = interpolate(f, [t0, t0 + 120], [0, 1], cl);
@@ -59,7 +62,7 @@ export const LineaCinetica: React.FC<{
         right: alinear === 'center' ? 0 : undefined,
         top: y,
         textAlign: alinear,
-        transform: `translateY(-50%) scale(${1 + 0.015 * deriva})`,
+        transform: `translateY(-50%) scale(${1 + 0.015 * acercar * deriva})`,
         transformOrigin: alinear === 'center' ? '50% 50%' : '0% 50%',
         lineHeight: 1.02,
         letterSpacing: -tam * 0.03,
@@ -74,24 +77,49 @@ export const LineaCinetica: React.FC<{
         const tt = nivel === 2 ? tam * 1.25 : tam;
         return (
           <span key={i} style={{display: 'inline-block', whiteSpace: 'nowrap', marginRight: tam * 0.24, fontFamily: fam, fontWeight: peso, fontSize: tt, color: nivel === 2 ? acento : color, verticalAlign: 'baseline'}}>
-            {[...p.t].map((c, j) => {
-              const a = p.at + j * escalon;
-              const pr = interpolate(f, [a, a + durLetra], [0, 1], {...cl, easing: Easing.bezier(0.16, 1, 0.3, 1)});
-              const reb = nivel === 2 ? inercia(f, a + durLetra * 0.6, 0.05, {freq: 2.8, decay: 8}) : 0;
-              let st: React.CSSProperties = {};
-              if (entrada === 'mascara') st = {transform: `translateY(${(1 - pr) * 105 - reb * 100}%)`};
-              if (entrada === 'sube') st = {transform: `translateY(${(1 - pr) * 40}px)`, opacity: pr};
-              if (entrada === 'escala') st = {transform: `scale(${0.4 + 0.6 * pr + reb})`, opacity: Math.min(1, pr * 2)};
-              if (entrada === 'desenfoque') st = {filter: `blur(${(1 - pr) * 12}px)`, opacity: pr, transform: `scale(${1.15 - 0.15 * pr})`};
-              return (
-                <span key={j} style={{display: 'inline-block', overflow: entrada === 'mascara' ? 'hidden' : undefined, verticalAlign: 'bottom', paddingBottom: entrada === 'mascara' ? tt * 0.12 : 0}}>
-                  <span style={{display: 'inline-block', whiteSpace: 'pre', ...st}}>{c}</span>
-                </span>
-              );
-            })}
+            {porLetra ? (
+              [...p.t].map((c, j) => {
+                const a = p.at + j * escalon;
+                const pr = interpolate(f, [a, a + durLetra], [0, 1], {...cl, easing: Easing.bezier(0.16, 1, 0.3, 1)});
+                let st: React.CSSProperties = {};
+                if (entrada === 'mascara') st = {transform: `translateY(${(1 - pr) * 105}%)`};
+                if (entrada === 'sube') st = {transform: `translateY(${(1 - pr) * 40}px)`, opacity: pr};
+                if (entrada === 'escala') st = {transform: `scale(${0.4 + 0.6 * pr})`, opacity: Math.min(1, pr * 2)};
+                if (entrada === 'desenfoque' || entrada === 'palabra') st = {filter: `blur(${(1 - pr) * 12}px)`, opacity: pr};
+                return (
+                  <span key={j} style={{display: 'inline-block', overflow: entrada === 'mascara' ? 'hidden' : undefined, verticalAlign: 'bottom', paddingBottom: entrada === 'mascara' ? tt * 0.12 : 0}}>
+                    <span style={{display: 'inline-block', whiteSpace: 'pre', ...st}}>{c}</span>
+                  </span>
+                );
+              })
+            ) : (
+              <EntradaPalabra f={f} at={p.at} dur={durLetra} modo={entrada}>
+                {p.t}
+              </EntradaPalabra>
+            )}
           </span>
         );
       })}
     </div>
   );
 };
+
+/**
+ * Entrada de una palabra entera (no letra a letra), como en las referencias: aparece desenfocada y
+ * se enfoca subiendo un poco. La máscara es de borde suave (degradado del 40 % + desenfoque), nunca
+ * una línea dura que se vea. Sin rebotes ni temblores.
+ */
+const EntradaPalabra: React.FC<{f: number; at: number; dur: number; modo: EntradaLetra; children: string}> = ({f, at, dur, modo, children}) => {
+  const pr = interpolate(f, [at, at + dur], [0, 1], {...cl, easing: Easing.bezier(0.16, 1, 0.3, 1)});
+  const blur = (1 - pr) * (modo === 'mascara' ? 6 : 10);
+  const st: React.CSSProperties = {display: 'inline-block', whiteSpace: 'pre', filter: blur > 0.05 ? `blur(${blur}px)` : undefined};
+  if (modo === 'mascara') {
+    // degradado vertical que sube: el borde del revelado mide el 40 % de la línea
+    const pos = 100 - pr * 100;
+    const m = `linear-gradient(180deg, transparent ${pos - 40}%, #000 ${pos}%)`;
+    return <span style={{...st, transform: `translateY(${(1 - pr) * 0.25}em)`, WebkitMaskImage: m, maskImage: m}}>{children}</span>;
+  }
+  if (modo === 'escala') return <span style={{...st, opacity: pr, transform: `scale(${0.92 + 0.08 * pr})`}}>{children}</span>;
+  return <span style={{...st, opacity: pr, transform: `translateY(${(1 - pr) * 0.18}em)`}}>{children}</span>;
+};
+

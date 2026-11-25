@@ -139,8 +139,9 @@ Niveles: (1) 2D sobre foto; (2) **2.5D con CSS** (`perspective` + `preserve-3d` 
 
 ## 8. Tipografía cinética
 
-- Stagger por carácter 1-2 f; por palabra en líneas largas.
-- Desplazamiento en Y del 40-60 % de la altura de línea → 0 con spring de damping 15-20 y `overflow: hidden` por línea.
+- **Subtítulos: palabra a palabra**, con la palabra entera enfocándose (desenfoque 10 px → 0, subida de 0,18 em, 9 f). El stagger por carácter, de izquierda a derecha, se lee como «hecho por Claude» (prueba a ciegas, 25/11/2026). Resérvalo para un título hero puntual.
+- Si hay máscara, con **borde suave** (degradado del 40 % + desenfoque): un `overflow: hidden` con línea dura se ve. Sin rebotes ni temblores al aparecer, y el texto no se acerca después de entrar.
+- **Coloca el texto alrededor del sujeto** (cielo, hueco, encima del objeto), distinto en cada plano; no siempre abajo y centrado.
 - Tracking que se cierra de 0,3 em al valor final en 30-60 f con ease-out exponencial, para momentos hero.
 - Jerarquía por tamaño (tamaño = importancia), no por cantidad de efectos.
 - Legibilidad: contraste ≥4,5:1; subtítulos ≤42 caracteres por línea, 2 líneas, ≤20 caracteres/s; zonas seguras 9:16 (Reels 220 px arriba / 420 abajo; TikTok 108 / 320, 60 izq., 120 der.; verificar en la app).

@@ -75,3 +75,16 @@ Actualizar `skills/produccion-reels-instagram` (catálogo, recetas medidas, list
 - Cámara sin temblor de mano (0 px frente a 0,2-3 px).
 - Audio sin masterizar: −18 LUFS frente a −14.
 
+### Añadidos tras la prueba a ciegas con Erik (25/11/2026): lo detectó a la primera
+- Texto que se acerca (escala) después de entrar.
+- Texto que entra letra a letra de izquierda a derecha: parece que el subtítulo se mueve hacia la derecha.
+- Máscara de abajo arriba con borde duro: se ve la línea. Tiene que ser un revelado suave (degradado y desenfoque).
+- Imágenes y subtítulos que tiemblan al aparecer (rebote, temblor, deriva distinta en cada imagen de una ráfaga). Una persona no se esforzaría en eso.
+- Transiciones de efecto sin motivo claro: el film burn y el «dash» del látigo hacia la derecha.
+- Textos siempre en el mismo sitio (abajo, centrados).
+
+**Lo que hace que una pieza parezca humana (según Erik):**
+- Los assets dirigen el vídeo: están elegidos para contar la historia.
+- Los zooms sirven a la narrativa.
+- Los subtítulos se colocan alrededor del sujeto.
+- Cortes de la misma persona en varias posturas para enseñar un proceso (jump cuts con intención).

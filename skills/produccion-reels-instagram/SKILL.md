@@ -158,6 +158,20 @@ Los de **sobrecorrección**, medidos en la Fase 5 (reel APZ con el kit v2):
 - cámara sin temblor (0 px);
 - audio a −18 LUFS.
 
+Los de la **prueba a ciegas** (Erik detectó el reel del kit v2 a la primera):
+- texto que se acerca después de entrar;
+- texto letra a letra de izquierda a derecha (usa `LineaCinetica` por palabra, que es lo que hace por defecto);
+- máscara con borde duro;
+- imágenes o subtítulos que tiemblan o rebotan al aparecer;
+- film burn y látigo como adorno;
+- textos siempre abajo y centrados.
+
+Lo que lo hace humano:
+- **los assets dirigen la historia**, no los efectos;
+- los zooms van con la narrativa;
+- **los subtítulos se colocan alrededor del sujeto**, distintos en cada plano;
+- jump cuts de una misma persona para enseñar un proceso.
+
 **Antes de entregar**, mide la pieza con `analizar.py` y compárala con 3 referencias de la misma duración (`dataset.py`). Si alguna medida sale del rango de las referencias, hay que justificarla.
 
 ---

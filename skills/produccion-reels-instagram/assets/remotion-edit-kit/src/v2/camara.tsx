@@ -19,9 +19,10 @@ export type Cam = {x: number; y: number; s: number; r: number};
  * movimiento): zoom 1 %/s hacia dentro, 14 px de vaivén y 0,35° con ruido de frecuencias distintas
  * por eje. `intensidad` 0 = quieta (solo para el plano de peso).
  */
-export const deriva = (f: number, {intensidad = 1, semilla = 1, px = 14, grados = 0.35, zoomPorS = 1, periodo = 150, fps = 30, temblor = 0.6} = {}): Cam => {
+export const deriva = (f: number, {intensidad = 1, semilla = 1, px = 14, grados = 0.35, zoomPorS = 1, periodo = 150, fps = 30, temblor = 0} = {}): Cam => {
   const t = (f / periodo) * Math.PI * 2;
-  // temblor de cámara en mano: pulso rápido (~5 Hz) de décimas de px; las referencias tienen 0,2-3 px y Claude 0
+  // temblor de cámara en mano (~5 Hz). 0 por defecto: en la prueba a ciegas Erik detectó «las imágenes tiemblan»
+  // como tic de Claude. Solo para imitar cámara en mano real (vídeo grabado), nunca sobre fotos o gráficos.
   const tt = (f / 6) * Math.PI * 2;
   return {
     x: ruido1(t, semilla) * px * intensidad + ruido1(tt, semilla + 21) * temblor,
