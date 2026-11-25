@@ -109,6 +109,21 @@ Límites conocidos del kit (ver catálogo): `GlassSlats` por defecto en bandas h
 
 ---
 
+## 4b. Que no parezca editado por Claude
+
+El kit v1 resuelve el timing, pero solo con formas y texto **parece hecho por Claude**. Un editor de After Effects trabaja con **material real y capas**:
+- **Assets reales siempre**: fotos y vídeo (`staticFile` + `<Img>` / `<OffthreadVideo>`), sujetos recortados con `rembg` (PNG con alfa, sombra y, si encaja, borde de papel), capturas de UI reales, logos en SVG. Nunca placeholders en una pieza final.
+- **Texturas y luz**: grano real, polvo, papel, light leaks y film burn como capas de vídeo con modo de fusión, más `Finish`.
+- **Motion graphics de shape layers**: trazos que se dibujan (`@remotion/paths`), flechas, círculos y subrayados que señalan lo que dice la voz, cajas de llamada, contadores, texto dentro de formas, mates.
+- **Cámara viva**: deriva sutil continua, parallax de recortes, empujes con curva asimétrica, desenfoque por velocidad. Quieto solo el plano de peso.
+- **Curvas distintas por propiedad** y acción secundaria (los hijos llegan 1-3 f después). Nunca el mismo pop en todo.
+- **Transiciones que mueven algo** (match move, zoom con blur, speed ramp), no fundidos ni deslizamientos de manual.
+- **Sonido por capas** en cada evento de jerarquía, distinto en cada uno.
+
+Tics que delatan a Claude: fondo cuadriculado con tarjeta blanca centrada, tipografía de sistema en un solo peso, todo centrado y alineado, placeholders, el mismo spring en todo, cámara quieta, colores planos sin textura, subtítulos sin jerarquía. Si la pieza tiene dos o más, no se entrega. El plan para llevar el kit a este nivel con referencias medidas está en `TRASPASO_A_CLAUDE_CODE.md` del repositorio.
+
+---
+
 ## 5. Calcar una referencia al milímetro (solo cuando hace falta)
 
 1. **Conseguir el vídeo** para estudio interno, nunca para republicar: en el ordenador de Erik, `yt-dlp <url>` o la skill `descargar-reels-instagram`. No hace falta Agent-Reach (en Instagram solo lee perfiles y publicaciones, no baja vídeo, y reutiliza las cookies de sesión de Chrome).
