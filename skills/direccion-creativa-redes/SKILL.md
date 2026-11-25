@@ -20,6 +20,7 @@ En `references/` (si no están: `https://raw.githubusercontent.com/erubialesmola
 | Cómo deciden Duolingo, Loewe, Shinola, Rhode, Glossier, Ramp, Notion, Bilt, Wimbledon, Merriam-Webster, Liquid Death…; contradicciones (creador vs marca, lo-fi vs pulido, tendencia vs formato propio, volumen vs menos-mejor) y cuándo gana cada una; redes vs anuncio | `directores-y-equipos-de-redes.md` |
 | Ganchos y retención con datos (y el folclore del "3 s"), métricas por objetivo, series, catálogo de 20 formatos (cuáles sin cara), marca sin anuncio, plataformas 2026, mini-casos (MrBeast, Hoyos, Subway Takes, Hot Ones…) | `storytelling-y-formatos.md` |
 | Asociaciones (Keller), situaciones de compra (CEP, Romaniuk), regla 95-5 (B2B Institute), lujo y artesanía en redes, B2B y regalo corporativo, cuentas sin cara, **plantilla de mapa asociativo** y ejemplo APZ | `identidad-asociativa-lujo-b2b.md` |
+| **Biblioteca de ~67 casos desmontados** (consumo EE. UU., Europa y lujo, España y LatAm, B2B y tech EE. UU. con Whop a fondo, infoproductos y creadores): empieza por el índice, con atajo por mecanismo | `casos-redes/00-indice.md` |
 | Una grabación → N piezas, plantillas de serie en Remotion, ajustes de Osmo Pocket 3 y móvil, contenido sin cara, IA (percepción y etiquetado), estilos de edición, música para cuentas de empresa, sistema semanal y ficha de pieza | `produccion-sostenible.md` |
 
 Si existe `cerebro-erik`, lee antes la nota del cliente y sus decisiones.
@@ -126,6 +127,12 @@ Permisos (cliente, marcas en plano):
 Métrica a mirar:
 Comprobación en el móvil: zona segura · se entiende sin sonido · suena bien con sonido · sin marca de agua · no "mostly text"
 ```
+
+---
+
+## 8b. Usar la biblioteca de casos
+
+Antes de proponer series o formatos, busca en `casos-redes/00-indice.md` 2-3 casos con el **mismo mecanismo** (no el mismo sector), saca su regla y aplícala con los activos del cliente. Cita el caso a Erik con su nivel de evidencia y su «no copiar si…». Mezcla segmentos: el lujo aprende de la comida rápida y el B2B de los creadores.
 
 ---
 

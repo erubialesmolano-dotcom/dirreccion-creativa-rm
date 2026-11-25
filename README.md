@@ -16,7 +16,7 @@ Idea de fondo: el impacto sale de la **contención racionada** (un plano sosteni
 | `skills/blender-camara-3d` | Blender 5.x por script o MCP, cámara con porqué, previs para IA generativa, puente `shot.json`/`camera.json` con Remotion | pipeline Blender completo con código probado |
 | `skills/video-historia-remotion` | **Borrador v2** del Formato A de Milionegle con el porqué de cada regla y las correcciones técnicas. Tiene decisiones pendientes de Erik marcadas con ⚠️ | auditoría 2026 |
 
-`investigacion/` guarda los dos informes, todas las notas en bruto con fuentes (cuatro rondas; la cuarta, de redes) y las versiones anteriores de las skills.
+`investigacion/` guarda los dos informes, todas las notas en bruto con fuentes (cinco rondas; la cuarta, de redes, y la quinta, una biblioteca de ~67 casos de redes) y las versiones anteriores de las skills.
 
 ## Instalar
 
