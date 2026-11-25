@@ -1,0 +1,14 @@
+# Obligatorias
+numpy>=1.24
+opencv-python>=4.8        # o opencv-contrib-python / opencv-python-headless
+scipy>=1.10
+matplotlib>=3.7
+pillow>=10.1
+librosa>=0.10             # onsets, tempo y batería aproximada (HPSS)
+soundfile>=0.12
+scenedetect>=0.6          # solo para --detector scenedetect (comparación)
+
+# Opcionales
+# rapidocr_onnxruntime    # --ocr  (OCR ligero de subtítulos)
+# demucs                  # --demucs  (stem de batería; pesado, usa PyTorch)
+# pyloudnorm              # solo para las pruebas (contraste del LUFS de ffmpeg)

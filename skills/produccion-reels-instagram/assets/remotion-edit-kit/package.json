@@ -1,0 +1,26 @@
+{
+  "name": "remotion-edit-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kit de componentes de edición en Remotion para reels verticales 1080×1920 a 30 fps",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "render:demo": "remotion render src/index.ts Demo out/demo.mp4",
+    "master": "ffmpeg -y -i out/demo.mp4 -c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 -ar 48000 -c:a aac -b:a 192k out/demo-master.mp4",
+    "sfx": "node scripts/generar-sfx.mjs",
+    "stills": "node scripts/stills.mjs",
+    "render:demo-ligero": "remotion render src/index.ts Demo out/demo-050.mp4 --scale=0.5 --crf=28"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.547",
+    "@remotion/noise": "4.0.547",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.547"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.1",
+    "typescript": "5.9.3"
+  }
+}

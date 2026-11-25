@@ -25,6 +25,8 @@ En `references/` (si no están: `https://raw.githubusercontent.com/erubialesmola
 
 Si existe `cerebro-erik`, lee antes la nota del cliente y sus decisiones.
 
+**Para guionizar, editar y renderizar cada reel** (guion para el Instagram actual, hoja de edición, kit de Remotion, calco de referencias), usa `produccion-reels-instagram`.
+
 ---
 
 ## 1. Proceso
